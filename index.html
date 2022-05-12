@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <form id="form" action="#" onsubmit="Cadastrar();return false">
+        <h3>Cadastrar</h3>
+        <div>
+          <h5>Username</h5>
+          <input type="text" id="username" onblur="confirmarTamanhoUsuario()"/>
+          <div id="usernameerror" class="invalid">Username Repetido</div>
+          <div id="usernameerror2" class="invalid">Username deve ter entre 3 a 25 caractéres.</div>
+        </div>
+        <div>
+            <h5>Email</h5>
+            <input type="text" id="email" onblur="validarEmail()"/>
+            <div id="emailerror" class="invalid">Email Repetido</div>
+            <div id="emailerror2" class="invalid">Email Invalido</div>
+        </div>
+        <div>
+            <h5>Senha</h5>
+            <input type="password" id="senha" onblur="confirmarTamanhoSenha(); confirmarSenha()"/>
+            <div id="passworderror1" class="invalid">Senha deve conter no mínimo 8 caractéres</div>
+        </div>
+        <div>
+          <h5>Confirmação de senha</h5>
+          <input type="password" id="senha2" onblur="confirmarSenha() "/>
+          <div id="passworderror2" class="invalid">Senha nao corresponde</div>
+        </div>
+        <input id="button" class="button" type="submit"></input>
+      </form>
+    </main>
+  </body>
+</html>
+
+<script src="javascript.js"></script>
