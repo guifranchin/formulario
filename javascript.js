@@ -50,16 +50,16 @@ function confirmarSenha() {
   let senha = document.getElementById("senha").value;
   let senha2 = document.getElementById("senha2").value;
 
-  if (senha != senha2) {
-    document.getElementById("passworderror2").style.display = "block";
-    document.getElementById("button").disabled = true;
-    document.getElementById("senha").classList.add("button-vermelho");
-    document.getElementById("senha2").classList.add("button-vermelho");
-} else {
+  if (senha == senha2 && senha != '') {
     document.getElementById("passworderror2").style.display = "none";
     document.getElementById("button").disabled = false;
     document.getElementById("senha").classList.add("input-sucesso");
     document.getElementById("senha2").classList.add("input-sucesso");
+} else {
+    document.getElementById("passworderror2").style.display = "block";
+    document.getElementById("button").disabled = true;
+    document.getElementById("senha").classList.add("button-vermelho");
+    document.getElementById("senha2").classList.add("button-vermelho");
 }
 }
 
